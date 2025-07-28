@@ -1,9 +1,8 @@
 ---
 manifest_version: 1
-description:
+description: Set ECMP hashing criteria to include port data in the flow determination.
 supported_apstra_versions:
   - 5.0.0
   - 5.0.1
   - 5.1.0
   - 6.0.0
-
