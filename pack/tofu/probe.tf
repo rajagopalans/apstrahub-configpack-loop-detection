@@ -12,7 +12,7 @@ resource "apstra_raw_json" "probe" {
           "name": "Loop Detect Status",
           "type": "extensible_data_collector",
           "properties": {
-            "service_name": "Loop_Detect_Schema",
+            "service_name": "Loop_Detect_Schema_${var.blueprint_id}",
             "service_interval": "120",
             "value_map": {},
             "graph_query": [

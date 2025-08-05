@@ -3,9 +3,9 @@ resource "apstra_raw_json" "collector" {
     apstra_raw_json.service
   ]
   url = "/api/telemetry/collectors"
-  id = "Loop_Detect_Schema"
+  id = "Loop_Detect_Schema_${var.blueprint_id}"
   payload = jsonencode({
-    service_name = "Loop_Detect_Schema",
+    service_name = "Loop_Detect_Schema_${var.blueprint_id}",
     collectors = [
       {
         platform = {

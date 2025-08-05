@@ -4,7 +4,7 @@
 # change action to "laser-off", if you want to change the action to laser off
 
 resource "apstra_property_set" "ps" {
-  name = "Loop Detect"
+  name = "Loop Detect ${data.apstra_datacenter_blueprint.bp.name}"
   data = jsonencode({
     loop_detect = {
       tx_int = "10s",

@@ -3,7 +3,7 @@ resource "apstra_raw_json" "service" {
     apstra_datacenter_property_set.loop_detect_ps
   ]
   url = "/api/telemetry-service-registry"
-  id = "Loop_Detect_Schema"
+  id = "Loop_Detect_Schema_${var.blueprint_id}"
   payload = jsonencode(
     {
       application_schema = {
@@ -37,7 +37,7 @@ resource "apstra_raw_json" "service" {
           ],
           type = "object"
         },
-        service_name = "Loop_Detect_Schema",
+        service_name = "Loop_Detect_Schema_${var.blueprint_id}",
         storage_schema_path = "aos.sdk.telemetry.schemas.iba_string_data",
         description = "Check the state of Lightweight Loop Detection on assigned interfaces"
       }
